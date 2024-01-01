@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title='QR code component'
+  favicon_route='/qr_code_component/favicon-32x32.png'
+>
+  <main class='h-full px-7 flex justify-center items-center bg-light-gray-qr'>
+    <section class='p-5 pb-10 flex flex-col gap-y-8 rounded-2xl bg-white-qr'>
+      <article class='rounded-2xl overflow-hidden'>
+        <img
+          src='/qr_code_component/image-qr-code.png'
+          alt='QR Code Frontend Mentor'
+        />
+      </article>
+      <article class='px-3 flex flex-col gap-y-5 text-center'>
+        <h2 class='text-xl font-bold text-dark-blue-qr'>
+          Improve your front-end skills by building projects
+        </h2>
+        <p class='text-[15px] text-grayish-blue-qr'>
+          Scan the QR code to vist Frontend Mentor and take your coding skills
+          to the next level
+        </p>
+      </article>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .bg-light-gray-qr {
+    background-color: hsl(212, 45%, 89%);
+  }
+
+  .bg-white-qr {
+    background-color: hsl(0, 0%, 100%);
+  }
+
+  .text-dark-blue-qr {
+    color: hsl(218, 44%, 22%);
+  }
+
+  .text-grayish-blue-qr {
+    color: hsl(220, 15%, 55%);
+  }
+</style>
