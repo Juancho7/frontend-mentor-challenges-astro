@@ -6,15 +6,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title='QR code component'
   favicon_route='/qr_code_component/favicon-32x32.png'
 >
-  <main class='h-full px-7 flex justify-center items-center bg-light-gray-qr'>
-    <section class='p-5 pb-10 flex flex-col gap-y-8 rounded-2xl bg-white-qr'>
+  <main
+    class='h-full px-7 min-[1440px]:px-0 flex justify-center items-center bg-light-gray-qr'
+  >
+    <section
+      class='w-[319px] p-5 pb-10 flex flex-col gap-y-6 rounded-2xl bg-white-qr'
+    >
       <article class='rounded-2xl overflow-hidden'>
         <img
           src='/qr_code_component/image-qr-code.png'
           alt='QR Code Frontend Mentor'
         />
       </article>
-      <article class='px-3 flex flex-col gap-y-5 text-center'>
+      <article class='px-3 flex flex-col gap-y-3 text-center'>
         <h2 class='text-xl font-bold text-dark-blue-qr'>
           Improve your front-end skills by building projects
         </h2>
