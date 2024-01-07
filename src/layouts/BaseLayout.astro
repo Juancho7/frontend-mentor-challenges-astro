@@ -9,12 +9,6 @@ const { favicon_route, title } = Astro.props;
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
-    <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
-    <link
-      href='https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap'
-      rel='stylesheet'
-    />
   </head>
   <body class='h-screen'>
     <slot />
@@ -24,6 +18,5 @@ const { favicon_route, title } = Astro.props;
 <style is:global>
   * {
     /* outline: 1px solid red; */
-    font-family: 'Outfit', sans-serif;
   }
 </style>
