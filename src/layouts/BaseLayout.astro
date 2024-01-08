@@ -1,11 +1,11 @@
 ---
-const { favicon_route, title } = Astro.props;
+const { faviconRoute, title } = Astro.props;
 ---
 
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-    <link rel='icon' type='image/svg+xml' href={favicon_route} />
+    <link rel='icon' type='image/svg+xml' href={faviconRoute} />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
@@ -17,6 +17,6 @@ const { favicon_route, title } = Astro.props;
 
 <style is:global>
   * {
-    /* outline: 1px solid red; */
+    outline: 1 px solid red;
   }
 </style>

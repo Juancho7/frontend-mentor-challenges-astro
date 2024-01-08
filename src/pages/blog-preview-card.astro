@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title='Blog preview card' faviconRoute='/favicon-32x32.png'>
+  <main class='h-full flex justify-center items-center bg-yellow-blogpc'>
+    <section
+      class='w-[325px] p-5 border border-black-blogpc flex flex-col gap-y-5 font-figtree bg-white-bloggpc shadow-blog-preview-card rounded-2xl onhover-blogpc'
+    >
+      <article class='mb-1'>
+        <img
+          src='/blog_preview_card/illustration-article.svg'
+          alt='Illustration'
+          class='rounded-lg'
+        />
+      </article>
+      <article class='flex flex-col gap-y-3'>
+        <strong
+          class='w-fit py-1 px-2 text-sm font-extrabold bg-yellow-blogpc rounded'
+        >
+          Learning
+        </strong>
+        <span class='text-sm font-semibold'>Published 21 Dec 2023</span>
+      </article>
+      <article class='flex flex-col gap-y-3'>
+        <a href='#' class='w-fit'>
+          <h3 class='text-xl font-extrabold color-yellow-blogpc'>
+            HTML & CSS Foundations
+          </h3>
+        </a>
+        <p class='text-sm hover: font-semibold color-gray-bloggpc'>
+          These languajes are the backbone of every website, defining structure,
+          content and presentation.
+        </p>
+      </article>
+      <footer class='flex items-center gap-x-3'>
+        <img
+          src='/blog_preview_card/image-avatar.webp'
+          alt='Avatar'
+          class='w-8'
+        />
+        <strong>Greg Hooper</strong>
+      </footer>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  @font-face {
+    font-family: 'Figtree';
+    src: url('/fonts/Figtree/Figtree-VariableFont_wght.ttf') format('truetype');
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: 'Figtree';
+    src: url('/fonts/Figtree/Figtree-VariableFont_wght.ttf') format('truetype');
+    font-weight: 800;
+  }
+
+  .bg-yellow-blogpc {
+    background-color: hsl(47, 88%, 63%);
+  }
+
+  .bg-white-bloggpc {
+    background-color: hsl(0, 0%, 100%);
+  }
+
+  .color-gray-bloggpc {
+    color: hsl(0, 0%, 50%);
+  }
+
+  .shadow-blog-preview-card {
+    @apply shadow-black-blogpc;
+    box-shadow: 10px 10px 0;
+  }
+
+  .color-yellow-blogpc:hover ~ .onhover-blogpc {
+    box-shadow: 15px 15px 0;
+  }
+
+  .onhover-blogpc {
+    transition: box-shadow 100ms ease;
+  }
+
+  .onhover-blogpc:hover {
+    box-shadow: 15px 15px 0;
+  }
+
+  .color-yellow-blogpc:hover {
+    color: hsl(47, 88%, 63%);
+  }
+
+  .onhover-blogpc,
+  .color-gray-bloggpc {
+    transition:
+      color,
+      box-shadow 100ms ease;
+  }
+</style>

@@ -5,6 +5,10 @@ export default {
     extend: {
       fontFamily: {
         outfit: ['Outfit', 'sans-serif'],
+        figtree: ['Figtree', 'sans-serif'],
+      },
+      colors: {
+        'black-blogpc': 'hsl(0, 0%, 7%)',
       },
     },
   },
