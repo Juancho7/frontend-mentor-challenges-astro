@@ -9,14 +9,16 @@ const solutions = [
     linkToVisit: '/qr-code',
     imgRoute: '/screenshots/qr-code.PNG',
     textColor: '',
-    repository: '',
+    repository:
+      'https://github.com/Juancho7/frontend-mentor-challenges-astro/blob/master/src/pages/qr-code.astro',
   },
   {
     soltionName: 'Blog Preview Card',
     linkToVisit: '/blog-preview-card',
     imgRoute: '/screenshots/blog-preview-card.PNG',
     textColor: '',
-    repository: '',
+    repository:
+      'https://github.com/Juancho7/frontend-mentor-challenges-astro/blob/master/src/pages/blog-preview-card.astro',
   },
 ];
 ---
@@ -79,7 +81,7 @@ const solutions = [
                   </a>
                 </section>
                 <section class='h-full flex justify-center items-center'>
-                  <a href='#'>
+                  <a href={solution.repository}>
                     <img
                       src='/svg/github_icon_square.svg'
                       alt='GitHub Repository'
