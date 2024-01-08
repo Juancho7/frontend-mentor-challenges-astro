@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LinkedInIcon from '../components/LinkedInIcon.astro';
+import PortfolioIcon from '../components/PortfolioIcon.astro';
+
+const solutions = [
+  {
+    soltionName: 'QR Code Component',
+    linkToVisit: '/qr-code',
+    imgRoute: '/docs/qr-code.PNG',
+    textColor: '',
+    repository: '',
+  },
+  {
+    soltionName: 'Blog Preview Card',
+    linkToVisit: '/blog-preview-card',
+    imgRoute: '/docs/blog-preview-card.PNG',
+    textColor: '',
+    repository: '',
+  },
+];
+---
+
+<BaseLayout
+  title='Frontend Mentor Challenges'
+  faviconRoute='/favicon-32x32.png'
+>
+  <div
+    class='h-full p-3 min-[500px]:p-5 sm:p-8 md:p-12 lg:py-10 lg:px-52 xl:px-72 flex flex-col gap-y-5 text-gray-300 bg-gray-900'
+  >
+    <header class='flex flex-col gap-y-3'>
+      <h1 class='text-xl font-extrabold'>Frontend Mentor Challenges</h1>
+      <p>Hello! I am Juan Fernando Ordoñez Martinez.</p>
+      <p>
+        Here are some solutions of mine for some challenges from <a
+          href='https://www.frontendmentor.io/challenges'
+          target='_blank'
+          class='text-blue-400 hover:text-blue-300 underline'>Frontend Mentor</a
+        >.
+      </p>
+      <div class='flex flex-col sm:flex-row gap-3 [&>a]:transition-colors'>
+        <a
+          href='https://juan-portfolio-2023.netlify.app/'
+          target='_blank'
+          class='sm:w-44 text-center p-1 text-gray-100 bg-blue-600 rounded hover:bg-blue-500'
+        >
+          See My Portfolio
+        </a>
+        <a
+          href='https://github.com/Juancho7/frontend-mentor-challenges-astro'
+          target='_blank'
+          class='w-full sm:w-44 flex justify-center bg-black-github rounded'
+        >
+          <img
+            src='/svg/github_icon_square.svg'
+            alt='GitHub Repository'
+            class='w-8'
+          />
+        </a>
+      </div>
+    </header>
+    <main class='grow flex flex-col gap-y-3'>
+      <h2 class='text-lg font-bold'>Solutions</h2>
+      <div>
+        <ul class='grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-x-3 lg:gap-x-5'>
+          {
+            solutions.map((solution) => (
+              <li class='grow basis-0 h-52 border border-gray-300 flex flex-col rounded hover:shadow-md hover:shadow-gray-300 hover:scale-105 duration-100'>
+                <section class='h-4/5 relative'>
+                  <a href={solution.linkToVisit}>
+                    <span class='absolute w-full pl-2 font-semibold bg-gray-950 bg-opacity-50 text-gray-200'>
+                      {solution.soltionName}
+                    </span>
+                    <img
+                      src={solution.imgRoute}
+                      alt={solution.soltionName}
+                      class='h-full w-full object-cover object-center'
+                    />
+                  </a>
+                </section>
+                <section class='h-full flex justify-center items-center'>
+                  <a href='#'>
+                    <img
+                      src='/svg/github_icon_square.svg'
+                      alt='GitHub Repository'
+                      class='w-8'
+                    />
+                  </a>
+                </section>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </main>
+    <footer
+      class='h-12 flex justify-center items-center gap-x-3 [&>a]:block [&>a]:w-8 [&>a]:duration-[120ms]'
+    >
+      <a
+        href='https://www.linkedin.com/in/juan-fernando-ordo%C3%B1ez-martinez-752297264/'
+        target='_blank'
+        class='hover:scale-[1.15]'
+      >
+        <img src='/svg/linkedin_icon_square.svg' alt='LinkedIn' />
+      </a>
+      <a
+        href='https://github.com/Juancho7'
+        target='_blank'
+        class='hover:scale-[1.15]'
+      >
+        <img src='/svg/github_icon_square.svg' alt='GitHub' />
+      </a>
+      <a
+        href='https://juan-portfolio-2023.netlify.app/'
+        target='_blank'
+        class='hover:scale-[1.15]'
+      >
+        <img src='/svg/portfolio_icon.svg' alt='Portfolio' />
+      </a>
+    </footer>
+  </div>
+</BaseLayout>
+
+<style>
+  .bg-black-github {
+    background-color: #050505;
+    border: 2px solid #050505;
+  }
+
+  .bg-black-github:hover {
+    border-color: #161616;
+  }
+</style>
